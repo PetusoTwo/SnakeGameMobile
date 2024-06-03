@@ -7,7 +7,7 @@ const controls = document.getElementById("controls");
 
 //Configuracion del juego
 const boardSize = 10; 
-const gameSpeed = 140; //Velocidad
+const gameSpeed = 170; //Velocidad
 const squareTypes = {
     emptySquare: 0,
     snakeSquare: 1,

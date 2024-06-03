@@ -1,0 +1,239 @@
+/* Reset de estilos para asegurar consistencia entre navegadores */
+* {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  background: url('../imgs/gif.gif') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #2b224a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Estilos para el tablero y la información del tablero */
+#board, .boardInfo {
+  max-width: 90vw;
+  margin-top: 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1px;
+  background-color: black;
+  width: 400px;
+  height: 400px;
+}
+
+#start {
+  font-size: 25px;
+}
+#start, .boardInfo {
+  display: table-column;
+}
+
+.boardInfo{
+  font-size: 50px;
+  color: #3bcb3f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  color: #3bcb3f;
+}
+
+#scoreBoard{
+  font-size: 30px;
+  margin-top: 20px;
+
+}
+
+#gameOver {
+  display: contents;
+}
+
+.boardInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  color: #3bcb3f;
+}
+
+/* Estilos para botones */
+.btn-34,
+.btn-34 *,
+.btn-34 :after,
+.btn-34 :before,
+.btn-34:after,
+.btn-34:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-34 {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #000;
+  background-image: none;
+  color: #3bcb3f;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-34:disabled {
+  cursor: default;
+}
+.btn-34:-moz-focusring {
+  outline: auto;
+}
+.btn-34 svg {
+  display: block;
+}
+.btn-34 [hidden] {
+  display: none;
+}
+.btn-34 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-34:hover {
+  transform: scale(1.1);
+}
+.btn-34 span {
+  font-weight: 900;
+  mix-blend-mode: difference;
+}
+.btn-34:before {
+  aspect-ratio: 1;
+  background: #69b350;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s;
+  width: 0;
+}
+.btn-34:hover:before {
+  width: 100%;
+}
+.btn-34 {
+    font-size: 20px; /* Reducir el tamaño del texto */
+    padding: 0.1rem 1rem; /* Reducir el espacio interno del botón */
+    border-radius: 2rem; /* Hacer el borde más redondeado */
+    border-width: 2px; /* Hacer el borde más delgado */
+    margin: 20px;
+  }
+  .btn-34:hover {
+    transform: scale(0.9); /* Reducir el tamaño al pasar el ratón */
+  }
+  
+  .btn-34:active {
+    transform: scale(0.9); /* Mantener el tamaño reducido al hacer clic */
+  }
+
+/* Estilos para el marcador */
+#scoreBoard {
+  display: inline-flex;
+}
+
+/* Estilos para las celdas del tablero */
+.square {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  aspect-ratio: 1;
+}
+
+.emptySquare {
+  background-color: #3f2222;
+}
+
+.snakeSquare {
+  background-color: #5a612c;
+}
+
+.foodSquare {
+  background-color: #d11e1e;
+}
+
+/* Estilos para los controles */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+  margin-top: 20px;
+}
+        
+#controls button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 480px) {
+  * {
+      font-size: 16px;
+  }
+  
+  #board, .boardInfo {
+      max-width: 90vw;
+      margin-top: 10px;
+  }
+
+  #board {
+      width: 90vw;
+      height: 90vw;
+      grid-template-rows: repeat(10, 1fr);
+      grid-template-columns: repeat(10, 1fr);
+  }
+
+  .boardInfo {
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+  }
+
+  .btn-34 {
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+  }
+
+  #controls button {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      font-size: 14px;
+  }
+}
